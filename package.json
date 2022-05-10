@@ -1,0 +1,17 @@
+{
+  "name": "findmyhat",
+  "version": "1.0.0",
+  "description": "Javascript Assessment",
+  "main": "findMyHat.js",
+  "scripts": {
+    "main": "node main.js",
+    "original" : "node original.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hilda Lee",
+  "license": "ISC",
+  "dependencies": {
+    "clear-screen": "^1.0.0",
+    "prompt-sync": "^4.2.0"
+  }
+}
