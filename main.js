@@ -102,6 +102,8 @@ class Field {
     
     //   let hatX= Math.floor(Math.random() * col);
     //   let hatY= Math.floor(Math.random() * row);
+
+    //random 0
     
   }
 }
