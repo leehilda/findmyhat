@@ -4,15 +4,15 @@ const hat = '^';
 const hole = 'O';
 const fieldCharacter = '░';
 const pathCharacter = '*';
-const row = 5;
-const col = 5;
+const row = 10;
+const col = 10;
 
 class Field {
   constructor(field = [[]]) {
     this.field = field;
     this.locationX = 0; //coumn
     this.locationY = 0; //row
-    // Set the "home" position before the game starts
+    // Set the start position of ^
     this.field[0][0] = pathCharacter;
   }
 
@@ -39,6 +39,23 @@ class Field {
     }
   }
 
+  outsideBox() {
+    return (
+      this.locationY >= 0 &&
+      this.locationX >= 0 &&
+      this.locationY < this.field.length &&
+      this.locationX < this.field[0].length
+    );
+  }
+
+  isHat() {
+    return this.field[this.locationY][this.locationX] === hat;
+  }
+
+  isHole() {
+    return this.field[this.locationY][this.locationX] === hole;
+  }
+
   askQuestion() {
     const answer = prompt('Which way? ').toLowerCase();
     switch (answer) {
@@ -61,23 +78,6 @@ class Field {
     }
   }
 
-  outsideBox() {
-    return (
-      this.locationY >= 0 &&
-      this.locationX >= 0 &&
-      this.locationY < this.field.length &&
-      this.locationX < this.field[0].length
-    );
-  }
-
-  isHat() {
-    return this.field[this.locationY][this.locationX] === hat;
-  }
-
-  isHole() {
-    return this.field[this.locationY][this.locationX] === hole;
-  }
-
   print() {
     const displayString = this.field.map(row => {
         return row.join('');
@@ -85,10 +85,10 @@ class Field {
     console.log(displayString);
   }
 
-    static generateField(row, col, percentage) {
+    static generateField(row, col) {
     const newArray = [];
     for(let y=0; y< row.length; y++){
-        myArray.push([]);
+        newArray.push([]);
     }
     for (let y = 0; y < row.length; y++) {
         newArray.push([]);
