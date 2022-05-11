@@ -95,18 +95,18 @@ class Field {
       for (let x = 0; x < col.length; x++) {
         newArray[x][y](fieldCharacter);
       }
+      let hatX= Math.floor(Math.random() * col);
+      let hatY= Math.floor(Math.random() * row);
       
     }
 
-    // randomised hat
-    
-    //   let hatX= Math.floor(Math.random() * col);
-    //   let hatY= Math.floor(Math.random() * row);
-
     //random 0
+    //  const holePos 
+    //   let holePosX= Math.floor(Math.random() * col);
+    //   let holePosY= Math.floor(Math.random() * row);
     
   }
 }
 
-const myfield = new Field(Field.generateField(10, 10, 0.1));
+const myfield = new Field(Field.generateField(10, 10));
 myfield.runGame();
