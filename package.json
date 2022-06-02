@@ -5,13 +5,15 @@
   "main": "findMyHat.js",
   "scripts": {
     "main": "node main.js",
-    "original" : "node original.js",
+    "original": "node original.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Hilda Lee",
   "license": "ISC",
   "dependencies": {
+    "clear": "^0.1.0",
     "clear-screen": "^1.0.0",
-    "prompt-sync": "^4.2.0"
+    "prompt-sync": "^4.2.0",
+    "prompt-sync-history": "^1.0.1"
   }
 }
